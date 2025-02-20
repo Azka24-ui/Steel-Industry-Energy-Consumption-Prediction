@@ -78,10 +78,6 @@ The pipeline includes:
 - Recommended optimization strategies for reducing unnecessary consumption.
 
 ---
-## 📄 License
-This project is for **educational and research purposes only**.
-
----
 ## 👤 Author
 **Azka Irsyad Choir**  
 📧 Email: [azkairsyad24@gmail.com](mailto:azkairsyad24@gmail.com)  
