@@ -103,10 +103,6 @@ $ streamlit run app.py
 ✅ Optimized energy consumption based on model prediction results.
 
 ---
-## 📄 License
-This project is for **educational and research purposes**.
-
----
 ## 👤 Author
 **Azka Irsyad Choir**  
 📧 Email: [azkairsyad24@gmail.com](mailto:azkairsyad24@gmail.com)  
