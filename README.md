@@ -1,81 +1,110 @@
 # 📊 Steel Industry Energy Consumption Prediction
 
 ## 📌 Project Overview
-This project aims to develop a **Linear Regression-based Machine Learning model** to predict energy consumption in the steel industry. By analyzing historical energy consumption data, the goal is to enhance operational efficiency and reduce energy waste and carbon emissions.
+This project aims to build a **Machine Learning model based on Linear Regression** to predict energy consumption in the steel industry. By using historical energy consumption data, the project aims to improve operational efficiency and reduce energy waste and carbon emissions.
+
+This application is developed using **Streamlit**, with key features:
+✅ **Exploratory Data Analysis (EDA)** to analyze energy consumption patterns.  
+✅ **Energy consumption prediction** based on user input.  
+✅ **Pre-trained machine learning model** stored in a pipeline (`best_model_pipeline.pkl`).  
+
+🔗 **Try the Application on Hugging Face:** [Deployments](https://huggingface.co/spaces/AzkaIrsyad/Deployments)
 
 ---
 ## 📂 Data Source
-This project utilizes **historical energy consumption data** from the steel industry. The dataset includes factors such as:
-- Time-based energy usage trends
-- Load types
-- Technical characteristics of energy consumption
+The dataset used in this project is **steel industry energy consumption data**, which includes features such as:
+- Electricity consumption (**Usage_kWh**)
+- Power factor (**Power Factor**)
+- Reactive power (**Reactive Power_kVarh**)
+- Carbon emissions (**CO2(tCO2)**)
+- Work status (**WeekStatus**)
 
 ---
 ## 🔍 Introduction
 ### 🔹 Background
-The steel industry is a major consumer of energy and a significant contributor to carbon emissions. Inefficient energy management leads to increased operational costs, affecting company profitability. Leveraging **historical energy data** through **machine learning** can provide crucial insights for optimizing energy use. Developing a predictive model based on data can help companies plan more efficient and sustainable strategies.
+The steel industry has high energy consumption and significantly contributes to carbon emissions. **Inefficiencies in energy management** can lead to increased operational costs. By leveraging **Machine Learning**, we can **predict energy consumption** more accurately, helping to make better decisions regarding energy management.
 
 ### 🔹 Business Objectives
-The objective of this project is to:
-- **Develop a predictive model** for energy consumption in the steel industry.
-- **Identify patterns** in energy consumption for better decision-making.
-- **Optimize operational efficiency** by reducing unnecessary energy usage.
-- **Reduce carbon footprint** through accurate forecasting and better resource allocation.
+- **Build an energy consumption prediction model** to improve operational efficiency.
+- **Analyze energy consumption patterns** through Exploratory Data Analysis (**EDA**).
+- **Reduce energy waste** through data-driven strategies.
 
 ---
 ## 🎯 SMART Goals
-✅ **Specific**: Build a predictive energy consumption model using **Linear Regression**.  
-✅ **Measurable**: Achieve **R² > 0.85** or **MSE below a defined target**.  
-✅ **Achievable**: Utilize available datasets to develop an end-to-end pipeline from **data preprocessing** to **model evaluation**.  
-✅ **Relevant**: Address the **high energy consumption challenge** in the steel industry.  
-✅ **Time-Bound**: Develop and validate the model within **3 months**.  
+✅ **Specific**: Develop an energy consumption prediction model for the steel industry using **Linear Regression**.  
+✅ **Measurable**: Achieve **prediction accuracy above 85%** based on the R² metric.  
+✅ **Achievable**: Use historical datasets to build an end-to-end pipeline from **EDA to model prediction**.  
+✅ **Relevant**: Address the challenge of high energy consumption in the steel industry.  
+✅ **Time-Bound**: Complete within **3 months** with a model ready for use in the Streamlit application.  
 
 ---
-## 🔎 Problem Statement
-### 🔹 Key Challenges
-- **Multiple factors influence energy consumption**, including **time, load type, and technical characteristics**, requiring detailed analysis.
-- **Historical energy data needs preprocessing and modeling** for accurate forecasting.
-- **Without a robust predictive model, companies struggle to identify energy usage patterns** and implement optimizations.
-- **Linear Regression serves as an initial approach** for forecasting energy demand efficiently.
+## 🛠 Implementation
+### 🔹 Data Preprocessing
+- Handled missing values using imputation techniques.
+- Scaled numerical features for better model performance.
+- Encoded categorical features such as `WeekStatus` and `Load_Type`.
 
-### 🔹 Problem Breakdown (5W+1H)
-✅ **WHAT**: What factors drive energy consumption in the steel industry?  
-✅ **WHY**: Why is optimizing energy consumption crucial for cost reduction and sustainability?  
-✅ **WHO**: Who are the key stakeholders impacted by inefficient energy usage?  
-✅ **HOW**: How can predictive modeling enhance energy management?  
-✅ **WHEN**: When do peak energy consumption periods occur?  
-✅ **WHERE**: Where should energy-saving measures be implemented?  
+### 🔹 Model Training & Evaluation
+- **Algorithm Used**: Linear Regression
+- **Training Split**: 80% training, 20% testing
+- **Evaluation Metrics**:
+  - R² Score: **0.87**
+  - Mean Squared Error (MSE)
+  - Mean Absolute Error (MAE)
 
----
-## 📊 Data Exploration & Features
-The analysis covers key energy consumption indicators such as:
-✅ **Time-based Energy Usage** → Identifying high-consumption periods  
-✅ **Load Type Analysis** → Evaluating different operational loads  
-✅ **Historical Trends** → Understanding past energy consumption patterns  
-✅ **Feature Engineering** → Selecting key attributes for model training  
+### 🔹 Model Deployment
+- The trained model was **saved as a pipeline** using `joblib`.
+- Integrated into a **Streamlit web application** for real-time predictions.
+- Deployed on **Hugging Face Spaces** for public access.
 
 ---
-## 🛠 Techniques and Tools
-🚀 **Tools & Libraries Used:**
-- 📌 `pandas` → Data manipulation
-- 📌 `numpy` → Numerical operations
-- 📌 `matplotlib & seaborn` → Data visualization
-- 📌 `scikit-learn` → Model building and evaluation
+## 📊 Exploratory Data Analysis (EDA)
+EDA is conducted to understand energy consumption patterns, including:
+✅ **Energy Consumption Distribution (Usage_kWh)**  
+✅ **Relationship between Reactive Power and Energy Consumption**  
+✅ **Load Type Analysis on Energy Consumption**  
+
+🖥 **View EDA in the Streamlit application!**
 
 ---
-## 📈 Model Implementation
-The pipeline includes:
-1. **Data Preprocessing** – Handling missing values, feature selection, and scaling.
-2. **Exploratory Data Analysis (EDA)** – Understanding key trends.
-3. **Model Training** – Implementing **Linear Regression**.
-4. **Evaluation Metrics** – Measuring model accuracy using **R² and MSE**.
-5. **Optimization** – Fine-tuning hyperparameters for better performance.
+## 🏗️ Model Deployment
+This application is developed using **Streamlit**, with two main features:
+1️⃣ **EDA Page (`eda.py`)** → Displays data analysis and energy consumption pattern visualization.  
+2️⃣ **Prediction Page (`predict.py`)** → Allows users to input new data and obtain energy consumption predictions based on the pre-trained **Machine Learning model**.
+
+💡 **Pipeline Model:**
+- **Model:** Linear Regression
+- **Model File:** `best_model_pipeline.pkl`
+- **Key Libraries:** `pandas`, `numpy`, `scikit-learn`, `joblib`
+
+---
+## 🚀 How to Run the App
+To run this application locally:
+```bash
+# Clone this repository
+$ git clone https://github.com/yourusername/energy-prediction.git
+$ cd energy-prediction
+
+# Install dependencies
+$ pip install -r requirements.txt
+
+# Run the Streamlit application
+$ streamlit run app.py
+```
+
+🔹 **Application Navigation**
+- **EDA Page:** Displays visualizations of energy consumption data.
+- **Prediction Page:** Input data to obtain energy consumption predictions.
 
 ---
 ## 📊 Results & Findings
-- The model achieved **R² = 0.87**, indicating strong predictive power.
-- Identified peak energy usage periods, helping in **energy conservation planning**.
-- Recommended optimization strategies for reducing unnecessary consumption.
+✅ The model achieved **an R² accuracy of 0.87**, demonstrating strong predictive performance.  
+✅ Identified energy consumption patterns to assist in decision-making for energy savings.  
+✅ Optimized energy consumption based on model prediction results.
+
+---
+## 📄 License
+This project is for **educational and research purposes**.
 
 ---
 ## 👤 Author
