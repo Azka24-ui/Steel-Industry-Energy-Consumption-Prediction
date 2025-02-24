@@ -105,6 +105,6 @@ Optimized energy consumption based on model prediction results.
 ---
 ## Author
 **Azka Irsyad Choir**  
-📧 Email: [azkairsyad24@gmail.com](mailto:azkairsyad24@gmail.com)  
-🔗 LinkedIn: [linkedin.com/in/azkairsyad](https://www.linkedin.com/in/azka-irsyad-aa2509191/)  
-🐱 GitHub: [github.com/azka irsyad](https://github.com/Azka24-ui)  
+Email: [azkairsyad24@gmail.com](mailto:azkairsyad24@gmail.com)  
+LinkedIn: [linkedin.com/in/azkairsyad](https://www.linkedin.com/in/azka-irsyad-aa2509191/)  
+GitHub: [github.com/azka irsyad](https://github.com/Azka24-ui)  
